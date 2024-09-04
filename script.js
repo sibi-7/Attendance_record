@@ -14,3 +14,5 @@ document.getElementById("attendance-form").addEventListener("submit", function(e
     // Here, you can send this data to your backend server via an AJAX request (using fetch or axios)
     alert("Attendance submitted successfully!");
 });
+
+
