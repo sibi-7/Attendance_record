@@ -3,71 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCA Department Attendance Management</title>
+    <title>MCA Department Attendance</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="html" href="record.html">
 </head>
 <body>
+<header>
+    <section class="clg">
+   <h1 style="color: brown;">
+        Dhanalakshmi Srinivasan College of Engineering and Technology ECR, MAMALLAPURAM.
+    </h1> 
+</section>
+</header>
+
     <!-- Navigation Bar -->
+  
     <nav>
         <h1>MCA Department</h1>
         <ul>
             <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Manage Attendance</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Year ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="record.html?year=mca1">MCA 1st Year</a></li>
+                    <li><a href="record.html?year=mca2">MCA 2nd Year</a></li>
+                </ul>
+            </li>
             <li><a href="#">Reports</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
     </nav>
 
-    <!-- Dashboard Section -->
-    <section id="dashboard">
-        <h2>Dashboard</h2>
-        <div class="card">
-            <h3>Total Students</h3>
-            <p id="total-students">34</p>
-        </div>
-        <div class="card">
-            <h3>Attendance Today</h3>
-            <p id="attendance-today">85%</p>
-        </div>
-    </section>
-
-    <!-- Attendance Management Section -->
-    <section id="attendance-management">
-        <h2>Manage Attendance</h2>
-        <form id="attendance-form">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date">
-
-            <label for="course">Course:</label>
-            <select id="course" name="course">
-                <option value="mca1">MCA 1st Year</option>
-                <option value="mca2">MCA 2nd Year</option>
-            </select>
-
-            <table id="student-table">
-                <thead>
-                    <tr>
-                        <th>Student Name</th>
-                        <th>Attendance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Student 1</td>
-                        <td><input type="checkbox" name="attendance" value="1"></td>
-                    </tr>
-                    <tr>
-                        <td>Student 2</td>
-                        <td><input type="checkbox" name="attendance" value="1"></td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-
-            <button type="submit">Submit Attendance</button>
-        </form>
-    </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
