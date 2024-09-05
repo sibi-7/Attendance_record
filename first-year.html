@@ -1,0 +1,109 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mca Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+
+   </head>
+   
+   <body>
+    <header>
+        <section class="clg">
+       <h1 style="color: brown;">
+            Dhanalakshmi Srinivasan College of Engineering and Technology ECR, MAMALLAPURAM.
+        </h1> 
+    </section>
+    </header>
+    <nav>
+        <h1>MCA Department</h1>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Year ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="first-year.html?year=1year">MCA 1st Year</a></li>
+                    <li><a href="record.html?year=2year">MCA 2nd Year</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Report</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Attendance Management Section -->
+   <section id="attendance-management">
+    <h2>Manage Attendance</h2>
+    <form id="attendance-form">
+       
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date">
+
+        <label for="time">Time :</label>
+        <input type="checkbox" id="morning" name="time" value="morning">
+        <label for="morning">FN</label>
+
+        <input type="checkbox" id="afternoon" name="time" value="afternoon">
+        <label for="afternoon">AN</label><br><br>
+    
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Student 1</td>
+                    <td><input type="checkbox" name="attendance" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 2</td>
+                    <td><input type="checkbox" name="attendance" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 3</td>
+                    <td><input type="checkbox" name="attendance-3" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 4</td>
+                    <td><input type="checkbox" name="attendance-4" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 5</td>
+                    <td><input type="checkbox" name="attendance-5" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 6</td>
+                    <td><input type="checkbox" name="attendance-6" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 7</td>
+                    <td><input type="checkbox" name="attendance-7" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 8</td>
+                    <td><input type="checkbox" name="attendance-8" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 9</td>
+                    <td><input type="checkbox" name="attendance-9" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Student 10</td>
+                    <td><input type="checkbox" name="attendance-10" value="1"></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+
+        <button type="submit">Submit Attendance</button>
+    </form>
+</section>
+
+<script src="script.js"></script>
+   </body>
+   </html>
+   
