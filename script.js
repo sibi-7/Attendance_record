@@ -28,3 +28,24 @@ document.addEventListener("DOMContentLoaded", function() {
         attendanceForm.reset();
     });
 });
+
+
+/* login page script */
+
+document.getElementById("login-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+  
+    if (username === "admin" && password === "password123") {
+        alert("Login successful!");
+        window.location.href = "first-year.html";
+        
+    } else {
+        alert("Re-correct the username or password")
+        const errorMessage = document.getElementById("error-message");
+        errorMessage.style.display = "block"; 
+    }
+});
