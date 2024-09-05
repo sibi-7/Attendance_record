@@ -1,18 +1,30 @@
-document.getElementById("attendance-form").addEventListener("submit", function(event){
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    const attendanceForm = document.getElementById("attendance-form");
 
-    // Collect data
-    const date = document.getElementById("date").value;
-    const course = document.getElementById("course").value;
-    const attendance = Array.from(document.querySelectorAll("input[name='attendance']:checked"))
-                            .map(input => input.closest('tr').querySelector('td').innerText);
+    attendanceForm.addEventListener("submit", function(event) {
+        event.preventDefault(); 
 
-    console.log("Date:", date);
-    console.log("Course:", course);
-    console.log("Attendance for students:", attendance);
+        const date = document.getElementById("date").value;
+        const timeSlots = document.querySelectorAll('input[name="time"]:checked');
+        const selectedTimes = [];
+        timeSlots.forEach(slot => selectedTimes.push(slot.value));
 
-    // Here, you can send this data to your backend server via an AJAX request (using fetch or axios)
-    alert("Attendance submitted successfully!");
+        const attendance = {};
+        const studentRows = document.querySelectorAll("#student-table tbody tr");
+
+        studentRows.forEach((row, index) => {
+            const studentName = row.querySelector("td:first-child").textContent;
+            const isChecked = row.querySelector('input[type="checkbox"]').checked;
+            attendance[studentName] = isChecked;
+        });
+
+        console.log("Date:", date);
+        console.log("Selected Time Slots:", selectedTimes);
+        console.log("Attendance:", attendance);
+
+
+        alert("Attendance has been submitted!");
+
+        attendanceForm.reset();
+    });
 });
-
-
