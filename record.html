@@ -27,7 +27,7 @@
                     <li><a href="record.html?year=2year">MCA 2nd Year</a></li>
                 </ul>
             </li>
-            <li><a href="#">Reports</a></li>
+            <li><a href="#">Report</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
     </nav>
@@ -36,8 +36,17 @@
    <section id="attendance-management">
     <h2>Manage Attendance</h2>
     <form id="attendance-form">
+       
         <label for="date">Date :</label>
         <input type="date" id="date" name="date">
+
+        <label for="time">Time :</label>
+        <input type="checkbox" id="morning" name="time" value="morning">
+        <label for="morning">FN</label>
+
+        <input type="checkbox" id="afternoon" name="time" value="afternoon">
+        <label for="afternoon">AN</label><br><br>
+    
         <table id="student-table">
             <thead>
                 <tr>
